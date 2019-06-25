@@ -32,7 +32,7 @@ its original number (e.g., [3, 6, 9])
 
 4.  Find the first number that is divisible by 7 AND greater than 10
 
-Bonus:
+Bonus: 
 
 5.  Create an array of the squares (the number times itself) of all numbers
 that are divisible by 7
