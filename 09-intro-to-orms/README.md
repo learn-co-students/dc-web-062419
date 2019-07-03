@@ -3,6 +3,7 @@
 
 ## Objectives
   - Understand the purpose of a Gemfile and Rake tasks
+    `bundle install`
   - Build our own Rake tasks
   - Correctly implement foreign key relationship
   - Create SQL tables that correspond to Ruby classes

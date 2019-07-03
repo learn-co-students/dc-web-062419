@@ -6,9 +6,28 @@ task :console do
 end
 
 desc "Say hello"
-task :hi do
-    puts "Hi everybody!"
+task :say_hi do 
+    puts "Hello Mod One!"
 end
 
+desc "set up database"
+task :create_book_db do 
+    book_sql = <<-SQL 
+        CREATE TABLE books (
+            id INTEGER PRIMARY KEY,
+            title TEXT,
+            author_id INTEGER);
+        SQL
+    DB.execute(book_sql)
+end
 
+desc "set up database"
+task :create_author_db do 
 
+    author_sql = <<-SQL 
+        CREATE TABLE authors (
+            id INTEGER PRIMARY KEY,
+            name TEXT);
+        SQL
+    DB.execute(author_sql)
+end
