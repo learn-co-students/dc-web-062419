@@ -1,5 +1,5 @@
 require 'pry'
 
+x = "hi"
 
-binding.pry
-0
+puts x.class.ancestors
