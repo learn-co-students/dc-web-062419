@@ -23,7 +23,7 @@ module GoogleBooks
 
     private
 
-    def author_url(max_results = 20)
+    def author_url(max_results=20)
       "#{BASE_URL}#{author_sanitizer(author)}&maxResults=#{max_results}"
     end
 
