@@ -1,7 +1,5 @@
-- Cover difference between Get and Post (not just to update server, but any time we are sending some information)
-- Contrast with get parameters
-
 ## Create page:
+
 
 - Build routes for creating a new book.  Add the form to `new.erb`:
 
