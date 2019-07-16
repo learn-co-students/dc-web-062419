@@ -1,6 +1,7 @@
 # Objectives
 - Explain how and why we use the MVC pattern (Model-View-Controller)
 - Map CRUD actions to RESTful routes
+- Students will be able to (SWBAT) construct a route with a dynamic parameter
 
 ## Deliverables
 
