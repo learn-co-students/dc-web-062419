@@ -1,6 +1,7 @@
 class BooksController < Sinatra::Base
 
     set :views, "app/views/books"
+    set :method_override, true
 
     get "/books" do 
         # show a list of all the books  (index)
@@ -43,7 +44,7 @@ class BooksController < Sinatra::Base
         @book.update(author: author, title: title, snippet: snippet)
         redirect "/books/#{@book.id}"
     end
-
+    
     delete "/books/:id" do 
         @book = Book.find(params[:id])
         @book.destroy

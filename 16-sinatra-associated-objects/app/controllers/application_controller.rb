@@ -14,5 +14,5 @@ class ApplicationController < Sinatra::Base
         erb :about
     end 
 
-    
+
 end

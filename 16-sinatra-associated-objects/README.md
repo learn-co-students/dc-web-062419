@@ -25,3 +25,9 @@ For each deliverable discuss
 
 1. Does the Schema need to Change?
 2. What are the necessary route\(s\)?
+
+
+TASK:
+
+- Build an index page to list all authors
+- Each name on the index page should link to a show/detail page for that author

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All the Authors</title>
+</head>
+<body>
+    <h1>All the Authors
+    <ul>
+        <% @authors.each do |author| %>
+            <li><a href=<%="/authors/#{author.id}" %>><%= author.name %></a></li>
+        <% end %>
+    </ul>
+</body>
+</html>
