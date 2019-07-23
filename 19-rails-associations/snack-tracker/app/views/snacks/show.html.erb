@@ -5,7 +5,7 @@
     Deliciousness: <%= @snack.deliciousness %>
 </div>
 
-<%= link_to "Destroy this snack", snack_path(@snack), "method" => :delete,
+<%= link_to "Destroy #{@snack.name}", snack_path(@snack), "method" => :delete,
     data: {:confirm => "Are you sure?"} %>
 
 <%= link_to "Index Page", snacks_path %>

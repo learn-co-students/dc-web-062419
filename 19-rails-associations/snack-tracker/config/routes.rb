@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'retailers/index'
+  get 'retailer/index'
   # get 'snacks/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get "/superfunhome", to: "snacks#home", as: :home # Snack Controller; 'home' action/method
