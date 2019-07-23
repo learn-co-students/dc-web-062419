@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   get "/superfunhome", to: "snacks#home", as: :home # Snack Controller; 'home' action/method
   # get "/snacks", to: "snacks#index"
   resources :snacks
-  resources :retailers, only: [:index, :show]
+  resources :retailers, only: [:index, :show, :new, :create]
 
 end
