@@ -1,24 +1,23 @@
-# README
+# Steps for Nested Forms
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- `accepts_nested_attributes_for :snacks` at top of Retailer model
 
-Things you may want to cover:
+- Build nested form:
 
-* Ruby version
+    ```rb
+        <%= f.fields_for :snacks do |snack| %>
+            <%= snack.label :name %>
+            <%= snack.text_field :name %>
+            <%= snack.label :calories %>
+            <%= snack.number_field :calories, step: 50 %>
+            <%= snack.label :deliciousness %>
+            <%= snack.select :deliciousness, (1..10) %>
+        <% end %>
+    ```
 
-* System dependencies
+- Build empty snack holders in controller:
+    `    @retailer.snacks.build`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Add to strong params:
+    `    params.require(:retailer).permit(:name, :year_established,
+        snacks_attributes: [:name, :calories, :deliciousness])`
