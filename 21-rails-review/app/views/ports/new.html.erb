@@ -1,0 +1,22 @@
+<h1>Create a New Port</h1>
+
+<%= form_for @port do |f|%>
+    <%= f.label :name%>
+    <%= f.text_field :name%><br>
+
+    <%=f.label :location%>
+    <%=f.text_field :location%> <br>
+
+    <%=f.label :docks%>
+    <%=f.number_field :docks%><br>
+
+    <%=f.label :category%>
+    <%=f.text_field :category%>
+
+    <%=f.label :ship%>
+    <%=f.collection_select :ship_ids, Ship.all, :id, :name %>
+
+
+    <%=f.submit%>
+
+<%end%>

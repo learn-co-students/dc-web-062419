@@ -1,0 +1,35 @@
+<h1>Create a New Ship</h1>
+
+    <% if @ship.errors.any? %>
+        <% @ship.errors.full_messages.each do |m| %>
+            <div>
+                <%= m %>
+            </div>
+        <% end %>
+    <% end %>
+
+
+<%= form_for @ship do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :category %><br>
+    <%= f.select :category, @categories %><br>
+
+    <%= f.label :crew_size %><br>
+    <%= f.number_field :crew_size %><br>
+
+    <%= f.label :port %><br>
+    <%= f.fields_for :ports do |pf| %>
+        <%= pf.label :name%>
+        <%= pf.text_field :name %>
+        <%= pf.label :location %>
+        <%= pf.text_field :location %>
+        <%= pf.label :docks %>
+        <%= pf.number_field :docks %>
+        <%= pf.label :category %>
+        <%= pf.select :category, @categories %>
+    <% end %>
+
+    <%= f.submit %>
+<% end %>

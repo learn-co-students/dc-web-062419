@@ -1,0 +1,12 @@
+<h1><%= @ship.name %></h1>
+<ul>
+    <li>Category: <%= @ship.category %></li>
+    <li>Crew Size: <%= @ship.crew_size %></li>
+</ul>
+
+<!-- Create a method to return the port this ship is currently docked at -->
+<h4> Port <%= @ship.name%> Docked At:</h4>
+<% @ship.current_docking %>
+    Name: <%= @ship.current_docking.port.name%><br>
+    Location: <%= @ship.current_docking.port.location %><br>
+    Time Docked: <%= @ship.current_docking.created_at %>
