@@ -1,7 +1,7 @@
 class SnacksController < ApplicationController
 
     before_action :find_snack, only: [:edit, :update, :show]
-
+    helper_method :current_username
     def home
     end
 
@@ -10,6 +10,11 @@ class SnacksController < ApplicationController
     end
 
     def show
+        cookies["favorite_cookie"] = "chocolate chip"
+        cookies["last_snack"] = @snack.name
+        session["secret_favorite"] = "oatmeal raisin"
+        # cookies = {"favorite_cookie": "chocolate chip",
+                     # "last_snack": "Twinkies"}
     end
 
     def new

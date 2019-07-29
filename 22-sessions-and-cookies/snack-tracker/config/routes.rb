@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   # get "/snacks", to: "snacks#index"
   resources :snacks
   resources :retailers, only: [:index, :show, :new, :create]
-
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  get "/logout", to: "sessions#logout"
 end
