@@ -1,0 +1,14 @@
+<h1>Detail page for <%= @snack.name %></h1>
+
+<div>
+    <div>Calories: <%= @snack.calories %></div>
+    <div>Deliciousness: <%= @snack.deliciousness %></div>
+    <% if @snack.retailer %>
+        <div>Retailer: <%= link_to @snack.retailer.name, retailer_path(@snack.retailer) %></div>
+    <% end %>
+</div>
+
+<%= link_to "Destroy #{@snack.name}", snack_path(@snack), "method" => :delete,
+    data: {:confirm => "Are you sure?"} %>
+
+<%= link_to "Index Page", snacks_path %>

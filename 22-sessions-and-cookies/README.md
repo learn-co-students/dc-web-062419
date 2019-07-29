@@ -1,4 +1,5 @@
 * Objectives
-    - Explain the difference between sessions and cookies
-    - Use cookies/sessions to store persistent data
-    - Retrieve and use data stored in cookies/sessions
+    - Review CRUD capabilities for single model
+    - Create associations between two models
+    - Use a dropdown select in a form
+    - Create a model instance and its associated instances from a single form
