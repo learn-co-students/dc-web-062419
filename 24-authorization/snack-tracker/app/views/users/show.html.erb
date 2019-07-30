@@ -1,0 +1,21 @@
+<h1>Detail page for <%= current_username %></h1>
+
+<h2>My Favorite Snacks</h2>
+
+<ul>
+    <% current_user.snacks.each do |snack| %>
+        <li><%= link_to snack.name, snack_path(snack) %></li>
+    <% end %>
+</ul>
+
+<%= form_tag favorites_path do %>
+    <% Snack.all.each do |s| %>
+        <div>
+            <%= check_box_tag "snack_ids[]", s.id, current_user.snacks.include?(s) %>
+            <%= s.name %>
+        </div>
+    <% end %>
+    <%= submit_tag "Submit" %>
+<% end %>
+
+

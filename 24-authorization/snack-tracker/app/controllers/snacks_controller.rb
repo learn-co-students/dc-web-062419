@@ -1,7 +1,9 @@
 class SnacksController < ApplicationController
 
     before_action :find_snack, only: [:edit, :update, :show]
+    before_action :authorized, except: [:home]
     helper_method :current_username
+
     def home
     end
 

@@ -1,9 +1,7 @@
-** Authentication **
+** Authorization **
 
 Goals:
 
-- Use the `bcrypt` gem to add password to a `User` model
-    - uncomment `bcrypt` gem
-    - add `has_secure_password` to `User` model
-    - add a `password_digest` column to the `User` model
-- Add ability to create a new user through the web interface
+- Limit parts of our site to logged in users
+- Use the checkbox helper to create join table records
+- Have the site dynamically show information based on specific user details
