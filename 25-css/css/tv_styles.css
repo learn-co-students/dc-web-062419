@@ -1,0 +1,19 @@
+li {
+    color: blue;
+}
+
+.green li:first-child {
+    color: pink;
+}
+
+.green li {
+    color: green;
+}
+
+#purple {
+    color: purple;
+}
+
+#worst-movie {
+    list-style: square;
+}
