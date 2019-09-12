@@ -1,70 +1,13 @@
 What does this app do? What is the Component Tree?
 
 ## Refactor Challenge - What did we have to change?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - State initialization moved to App
 - State managing callback functions moved to App
 - Count in Counter changed to `this.props.count`
 - Computation moved to Header
 - Computation switched to use a prop
 - Change functions switched to props in Counter
-- So many things in the code had to change to accomodate this tiny design change!
+- So many things in the code had to change to accommodate this tiny design change!
 
 # Intro to Redux
 
@@ -86,11 +29,11 @@ Installing redux: `npm install redux`
 
 
 ### What do we need to build?
-- Store
-- State that lives inside the store
-- Read from the store
-- Tell store when to change state (Dispatch -> Action)
-- Tell the store how to udpate state (Action/oldState -> Reducer -> newState)
+X Store
+X State that lives inside the store
+X Read from the store
+X Tell store when to change state (Dispatch -> Action)
+X Tell the store how to update state (Action/oldState -> Reducer -> newState)
 
 
 Creating our redux store:
