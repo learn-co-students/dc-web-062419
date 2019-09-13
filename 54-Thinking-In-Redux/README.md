@@ -8,7 +8,7 @@ Our goal today is to add redux to an existing app. We'll cover:
 - `mapDispatchToProps`
 - Action Creators
 
-So far, we've only used redux in a tiny sample application. Let's refactor our paintr app to use redux!
+So far, we've only used redux in a tiny sample application. Let's refactor our Paintr app to use redux!
 
 The steps we'll follow when we're thinking in Redux resemble our Thinking In React steps.
 
@@ -28,16 +28,22 @@ The steps we'll follow when we're thinking in Redux resemble our Thinking In Rea
   - Connect actions to components with `mapDispatchToProps`
 
 ## Things that need fixing
- - Searchbar
- - PaintingList
- - PaintingDetail
- - PaintingForm
+ X Searchbar
+ X PaintingList
+ X PaintingDetail
+ X PaintingForm
 
 ## mapDispatchToProps special syntax
 
 #### Weekend
-- Redux?
+- Redux? See Learn.co
+  - Try refactoring your old labs or projects to use redux?
 - Project Planning:
   - MUST have back end models WITH attributes and relationships
   - MUST have thorough wireframes for front end views
   - Must have your React component hierarchy or component tree
+
+#### Rest of the Day
+- What To Expect Talk given by Chine and Trevor
+- My last feelings with you
+  - Move to Mod 5 afterwards

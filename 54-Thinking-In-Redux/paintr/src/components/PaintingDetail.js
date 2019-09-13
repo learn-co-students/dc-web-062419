@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
 
 class PaintingDetail extends React.Component {
   render() {
@@ -21,4 +23,13 @@ class PaintingDetail extends React.Component {
   }
 }
 
-export default PaintingDetail;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    painting: state.paintings.find(
+      painting => painting.id === ownProps.match.params.paintingId
+    )
+  }
+}
+export default withRouter(connect(mapStateToProps)(PaintingDetail));
+//super sterioids component that has redux props injected in
+//but also also router props injected in
