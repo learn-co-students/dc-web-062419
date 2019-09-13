@@ -16,12 +16,6 @@ class PaintingDetail extends React.Component {
         <Link to={`/paintings/${this.props.painting.id}/edit`}>
           <button className="ui button">Edit</button>
         </Link>
-        <button
-          className="ui button"
-          onClick={() => {this.props.vote(this.props.painting.id)}}
-        >
-          Vote! {this.props.painting.votes}
-        </button>
       </div>
     );
   }

@@ -16,21 +16,6 @@ class PaintingsContainer extends React.Component {
     };
   }
 
-  voteForPainting = id => {
-    let updatePaintings = this.state.paintings.map(painting => {
-      if (painting.id === id) {
-        let newPainting = {
-          ...painting,
-          votes: painting.votes + 1
-        };
-        return newPainting;
-      } else {
-        return painting;
-      }
-    });
-    this.setState({ paintings: updatePaintings });
-  };
-
   updatePaintingInfo = (info) => {
     let newPaintingsArray = this.state.paintings.map(painting => {
       if (painting.id === info.paintingId) {
@@ -86,7 +71,7 @@ class PaintingsContainer extends React.Component {
               let selectedPainting = this.state.paintings.find(
                 painting => painting.id === props.match.params.paintingId
               );
-              return <PaintingDetail painting={selectedPainting} vote={this.voteForPainting}/>;
+              return <PaintingDetail painting={selectedPainting}/>;
             }}
           />
           <Route
