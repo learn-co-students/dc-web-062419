@@ -7,11 +7,6 @@
 - Referencing store/state in different files
 
 
-### Enhanced object literals
-js```{value: value}```
-can be replaced with js```{value}```
-
-
 ## Redux dev tools
 - [Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
@@ -63,17 +58,50 @@ const ConnectedHeader = withCount(Header)
 
 ## mapStateToProps
 js```
-const mapStateToProps = (state) => {
-    return {count: state.count}
+const mapStateToProps = (storeState) => {
+    return {count: storeState.count}
 }
 const withCount = connect(mapStateToProps)
 const ConnectedHeader = withCount(Header)
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 js```
 export default connect(mapStateToProps)(Header)
 ```
 
+## mapDispatchToProps
+js```
+const mapDispatchToProps = (dispatch) => {
+    return {
+      increment: (num) => { dispatch({type:"INCREMENT", payload: num}) }
+    }
+}
+```
+js```
+export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+```
+
+## Action Creators
+
+## combineReducer
+
 #### Weekend Homework
-- Redux labs
+- Redux
 - Brainstorm your Mod 5 project
-  - You can plan (wireframe, models) but don't start
+  - You can plan (wireframe, models) but don't start, Survey?
