@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { updatePainting } from "../redux/actions";
+import { updatingPainting } from "../redux/actions";
 
 class PaintingForm extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class PaintingForm extends React.Component {
       birthday: this.state.birthday,
       deathday: this.state.deathday
     };
-    this.props.updatePaintingInfo(info);
+    this.props.updatingPainting(info);
     this.props.history.push("/paintings/" + this.props.painting.id);
   };
 
@@ -80,7 +80,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  updatePaintingInfo: (info) => {dispatch(updatePainting(info))}
+  updatingPainting: (info) => {dispatch(updatingPainting(info))}
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(PaintingForm));
+export default connect(mapStateToProps, mapDispatchToProps)(PaintingForm);

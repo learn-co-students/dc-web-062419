@@ -1,5 +1,15 @@
 # Redux Thunk
 
+App
+ |-- Navbar
+ |-- About
+ |-- PaintingsContainer
+       |-- PaintingForm
+       |-- PaintingDetail
+       |-- Searchbar
+       |-- PaintingsList 
+
+
 ## Overview
 
 - problem: async actions in redux

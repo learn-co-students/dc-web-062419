@@ -4,6 +4,7 @@ import PaintingsList from "./PaintingsList";
 import PaintingDetail from "./PaintingDetail";
 import PaintingForm from "./PaintingForm";
 import Searchbar from "./Searchbar";
+import {connect} from 'react-redux'
 
 class PaintingsContainer extends React.Component {
   render() {
@@ -32,5 +33,6 @@ class PaintingsContainer extends React.Component {
     );
   }
 }
+
 
 export default PaintingsContainer;
