@@ -18,20 +18,6 @@
 * [Create React App Testing Tips](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests)
 * [Helpful React Testing Tutorial](https://testdriven.io/tdd-with-react-jest-and-enzyme-part-one)
 
-## Outline
-
-```text
-5m  What is TDD?
-5m  Different Types of Testing
-5m  Classification of Testing Software
-5m  What are Jest and Enzyme?
-10m Look at the starter code and install/setup Enzyme
-20m Writing Tests
-
-===
-1h  Total
-```
-
 ### What is TDD
 
 * Development method that utilizes a short development lifecycle: red-green-refactor
