@@ -10,74 +10,15 @@ Step 5: Add Inverse Data Flow //Build your app
 
 ### Let's make an app from scratch
 X User can see all pokemon
-X User can add pokemon to their team (up to 6) by double clicking
+X User can add pokemon to their team (up to 6) by clicking
   X User can't add same pokemon twice
-  X Pokemon is removed from the bottom
-X User can remove pokemon from their team by double clicking
-  X Pokemon is back in the bottom container
-  X back in their OG spot
-- User can view pokemon stats by single clicking
-  - At first, no pokemon stats, until a pokemon is clicked
+X User can remove pokemon from their team by clicking
+ 
+X User can create a new Pokemon
 
 Stretch
 - User can search by pokemon name
-- Reset button will remove all pokemon from team
+- delete button will remove all pokemon from list
 
-### CSS Helpers
-```
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-```
 
-```
-.details {
-  display: inline-block;
-  width: 70%;
-  background-color: #FAFAD2;
-  padding: 10px 30px 10px 30px;
-  margin: 10px 10px;
-}
 
-.pokemon {
-  display: inline-block;
-  width: 12%;
-  background-color: #FFD700;
-  padding: 30px 0px 30px 0px;
-  margin: 10px 10px;
-}
-
-.search {
-  font-size: 1.5rem;
-  width: 50%;
-  border: 3px solid #fecd2f;
-  color: #2d72fc;
-}
-
-.row {
-  display: block;
-}
-
-.block {
-  width: 30%;
-  display: inline-block;
-}
-```
-
-### Static components
-```
-<img alt="Pokemon" width="200" src="https://d33wubrfki0l68.cloudfront.net/42936b3e4d03c9b7c5927e3752a36cef7ff8bdf0/53627/images/pokemon.png"/>
-
-<div className="card details">
-  <div>
-    <div className="row">PIKACHU</div>
-    <div className="row">
-      <div><img alt="" src="" /></div>
-      <div className="block">hp: 10</div>
-      <div className="block">speed: 10</div>
-      <div className="block">attack: 10</div>
-      <div className="block">defense: 10</div>
-      <div className="block">sp-attack: 10</div>
-      <div className="block">sp-defense: 10</div>
-    </div>
-  </div>
-</div>
-```
